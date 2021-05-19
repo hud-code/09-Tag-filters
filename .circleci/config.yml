@@ -14,10 +14,6 @@ jobs:
       - checkout
       - run: echo "Testing complete"
   deploy:
-    filters:
-      tags:
-        only:
-          only: /.*/
     docker:
       - image: circleci/node
     steps:
@@ -38,3 +34,6 @@ workflows:
           filters:
             tags:
               only: /^beta.*/
+          filters:
+            tags:
+              only: /.*/
