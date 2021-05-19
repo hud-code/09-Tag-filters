@@ -33,7 +33,4 @@ workflows:
             - test
           filters:
             tags:
-              only: /^beta.*/
-          filters:
-            tags:
-              only: /.*/
+              only: /^beta.*/ OR /.*/
