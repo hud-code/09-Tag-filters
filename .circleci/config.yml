@@ -39,10 +39,15 @@ workflows:
       - test:
           requires:
             - build
+          filters:
+            tags:
+              only: /^beta.*/
       - deploy:
           requires:
             - test
-
+          filters:
+            tags:
+              only: /^beta.*/
 
               
 # workflows:
